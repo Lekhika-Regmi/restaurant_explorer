@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "959996323177",
+    "project_id": "restaurant-explorer-3ad1a",
+    "storage_bucket": "restaurant-explorer-3ad1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959996323177:android:ace28725595f9f6e0089f8",
+        "android_client_info": {
+          "package_name": "com.example.restaurant_explorer_nepal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959996323177-j02eid6k0qusj8ir6kheskkg0elt1ejt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.restaurant_explorer_nepal",
+            "certificate_hash": "0f15a0e0efe01297cbc35367747e5dc7aa801a89"
+          }
+        },
+        {
+          "client_id": "959996323177-g42sfr3ctsbb03t4e0i6ku6qbrda4opk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDO0F-9ZNaKhgwYcYyeB0JToENI6dwA9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959996323177-g42sfr3ctsbb03t4e0i6ku6qbrda4opk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
