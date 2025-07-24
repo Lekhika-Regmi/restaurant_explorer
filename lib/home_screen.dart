@@ -146,61 +146,81 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Align(
         alignment: Alignment.center,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              _supportState
-                  ? 'This Device is Supported'
-                  : 'This Device is not Supported',
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _getAvailableBiometrics,
-              child: const Text('Get Available Biometrics'),
-            ),
-            ElevatedButton(
-              onPressed: _authenticate,
-              child: const Text('Authenticate'),
-            ),
-            const SizedBox(height: 30),
-            const Text(
-              "Welcome User",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-            ),
-            const SizedBox(height: 20),
-            SizedBox(
-              width: 180,
-              height: 42,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black87,
-                  foregroundColor: const Color(0xFFFFF290),
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-                onPressed: _isSigningOut ? null : _handleSignOut,
-                child: _isSigningOut
-                    ? const SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2,
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            Color(0xFFFFF290),
-                          ),
-                        ),
-                      )
-                    : const Text(
-                        "Sign Out",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(height: 150),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 100,
+                    height: 42,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black87,
+                        foregroundColor: const Color(0xFFFFF290),
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-              ),
+                      onPressed: _isSigningOut ? null : _handleSignOut,
+                      child: _isSigningOut
+                          ? const SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  Color(0xFFFFF290),
+                                ),
+                              ),
+                            )
+                          : const Text(
+                              "Sign Out",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 150),
+            const Text(
+              "Welcome User",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 20),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  _supportState
+                      ? 'This Device is Supported'
+                      : 'This Device is not Supported',
+                  style: const TextStyle(fontSize: 16),
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: _getAvailableBiometrics,
+                  child: const Text('Get Available Biometrics'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black26,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: _authenticate,
+                  child: const Text('Authenticate'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black26,
+                  ),
+                ),
+                const SizedBox(height: 30),
+              ],
             ),
           ],
         ),

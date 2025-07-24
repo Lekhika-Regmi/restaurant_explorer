@@ -201,47 +201,55 @@ class _AuthScreenState extends State<AuthScreen> {
                 const SizedBox(height: 30),
 
                 // Login/Signup Button with loading state
-                SizedBox(
-                  width: 180,
-                  height: 42,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black87,
-                      foregroundColor: const Color(0xFFFFF290),
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 56),
+                    SizedBox(
+                      width: 180,
+                      height: 42,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black87,
+                          foregroundColor: const Color(0xFFFFF290),
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                        onPressed: _isLoading ? null : _submit,
+                        child: _isLoading
+                            ? const SizedBox(
+                                height: 20,
+                                width: 20,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    Color(0xFFFFF290),
+                                  ),
+                                ),
+                              )
+                            : Text(
+                                isLogin ? "Login" : "Signup",
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                       ),
                     ),
-                    onPressed: _isLoading ? null : _submit,
-                    child: _isLoading
-                        ? const SizedBox(
-                            height: 20,
-                            width: 20,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Color(0xFFFFF290),
-                              ),
-                            ),
-                          )
-                        : Text(
-                            isLogin ? "Login" : "Signup",
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                  ),
+                    if (isLogin) ...[
+                      const SizedBox(height: 20),
+                      IconButton(
+                        onPressed: _loginWithBiometrics,
+                        icon: Icon(Icons.fingerprint_outlined, size: 50),
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ],
                 ),
-                const SizedBox(height: 10),
-                if (isLogin) ...[
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: _loginWithBiometrics,
-                    child: const Text("Login with Biometrics"),
-                  ),
-                ],
 
                 const SizedBox(height: 10),
 
