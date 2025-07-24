@@ -3,12 +3,14 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:local_auth/local_auth.dart';
 
 import '../home_screen.dart';
 import '../widgets/my_loader.dart';
 import '../widgets/textfield.dart';
 import '../widgets/wave_clipper.dart';
 import 'auth_service.dart';
+import 'biometric_helper.dart';
 
 class AuthScreen extends StatefulWidget {
   final bool isLogin;
@@ -60,6 +62,7 @@ class _AuthScreenState extends State<AuthScreen> {
         );
         if (user != null) {
           log("User Logged In");
+          await _askBiometricSetup();
           _goToHome();
         } else {
           _showSnackBar("Login failed. Please check your credentials.");
@@ -231,6 +234,14 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                   ),
                 ),
+                const SizedBox(height: 10),
+                if (isLogin) ...[
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: _loginWithBiometrics,
+                    child: const Text("Login with Biometrics"),
+                  ),
+                ],
 
                 const SizedBox(height: 10),
 
@@ -311,5 +322,58 @@ class _AuthScreenState extends State<AuthScreen> {
         ],
       ),
     );
+  }
+
+  Future<void> _askBiometricSetup() async {
+    final shouldSetup = await showDialog<bool>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text("Enable Biometric Login?"),
+        content: const Text(
+          "Would you like to use biometrics for quick login next time?",
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text("No"),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text("Yes"),
+          ),
+        ],
+      ),
+    );
+
+    if (shouldSetup == true) {
+      await BiometricHelper.setBiometricPreference(true);
+    }
+  }
+
+  Future<void> _loginWithBiometrics() async {
+    final enabled = await BiometricHelper.getBiometricPreference();
+    if (!enabled) {
+      _showSnackBar("Biometric login not enabled.");
+      return;
+    }
+
+    final localAuth = LocalAuthentication();
+    final canCheck = await localAuth.canCheckBiometrics;
+
+    if (!canCheck) {
+      _showSnackBar("Biometric not available.");
+      return;
+    }
+
+    final didAuthenticate = await localAuth.authenticate(
+      localizedReason: "Login with biometrics",
+      options: const AuthenticationOptions(biometricOnly: true),
+    );
+
+    if (didAuthenticate) {
+      _goToHome(); // Navigate without password
+    } else {
+      _showSnackBar("Authentication failed.");
+    }
   }
 }

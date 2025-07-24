@@ -40,6 +40,11 @@ dependencies:
   firebase_auth: ^5.7.0
   dashed_circular_progress_bar: ^0.0.6
   google_sign_in: ^6.2.1
+  local_auth: ^2.1.6     # For biometric auth
+  local_auth_android: ^1.0.32
+  flutter_secure_storage: ^9.0.0   # For storing secure token locally
+  shared_preferences: ^2.0.15
+  crypto: ^3.0.3
 
 dev_dependencies:
   flutter_test:
