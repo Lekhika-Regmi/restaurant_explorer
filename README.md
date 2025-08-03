@@ -2,10 +2,14 @@
 
 A Flutter app to explore restaurants in Nepal, featuring deep linking and detailed restaurant views.
 
+---
+
 ## Requirements
 
 - [Flutter](https://flutter.dev/)
 - [Mockoon](https://mockoon.com/) (for local API mocking)
+
+---
 
 ## Setup
 
@@ -22,43 +26,65 @@ A Flutter app to explore restaurants in Nepal, featuring deep linking and detail
 
 4. **Update your app's API base URL** (if needed) to point to your local Mockoon server (e.g., `http://localhost:3000`).
 
+---
+
 ## Screenshots
 
-### Auth Screens
+### 🔐 Authentication Screens
 
-| Login                                              | Register                                                 | Biometric Prompt                                           |
-| -------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------- |
-| ![Login](assets/images/screenshots/auth_login.png) | ![Register](assets/images/screenshots/auth_register.png) | ![Biometric](assets/images/screenshots/auth_biometric.png) |
+| Login | Sign Up | Enable Biometric | Native Biometric |
+|-------|---------|------------------|------------------|
+| ![Login](assets/images/screenshots/auth_login.png) | ![Sign Up](assets/images/screenshots/auth_sign_up.png) | ![Biometric Enable](assets/images/screenshots/auth_biometric_enable_popup.png) | ![Native Biometric](assets/images/screenshots/auth_native_biometric_input.png) |
 
-### Explore Screens
+---
 
-| Restaurant List                                             | Restaurant Detail                                       |
-| ----------------------------------------------------------- | ------------------------------------------------------- |
-| ![Explore List](assets/images/screenshots/explore_list.png) | ![Detail](assets/images/screenshots/explore_detail.png) |
+### 🍽️ Explore Screen
 
-### Favorites
+| Explore | Explore Search | Sort |
+|---------|----------------|------|
+| ![Explore](assets/images/screenshots/explore_screen.png) | ![Search](assets/images/screenshots/explore_search_functionality.png) | ![Sort](assets/images/screenshots/explore_sort.png) |
 
-| Favorites List                                       |
-| ---------------------------------------------------- |
-| ![Favorites](assets/images/screenshots/fav_list.png) |
+---
 
-### Account
+### ❤️ Favorites Screen
 
-| Profile                                                   | Settings                                                    |
-| --------------------------------------------------------- | ----------------------------------------------------------- |
-| ![Profile](assets/images/screenshots/account_profile.png) | ![Settings](assets/images/screenshots/account_settings.png) |
+| Favorites | Sort By |
+|-----------|---------|
+| ![Favorites](assets/images/screenshots/fav_screen.png) | ![Sort By](assets/images/screenshots/fav_sort_by.png) |
 
-### Maps
+---
 
-| Map View                                        |
-| ----------------------------------------------- |
-| ![Map](assets/images/screenshots/maps_view.png) |
+### 👤 Account Screen
+
+| Account Main | Change Password | Security |
+|--------------|------------------|----------|
+| ![Account](assets/images/screenshots/account_screen.png) | ![Change Password](assets/images/screenshots/account_change-password_popup.png) | ![Security](assets/images/screenshots/account_security.png) |
+
+---
+
+### 🗺️ Map View
+
+| Nearby Restaurants Map |
+|------------------------|
+| ![Map](assets/images/screenshots/maps_for_nearby_restaurant_overview.png) |
+
+---
+
+### 📄 Detail Pages
+
+| Detail Page Top | Detail Page Bottom |
+|-----------------|--------------------|
+| ![Detail Top](assets/images/screenshots/detail_page_1_top.png) | ![Detail Bottom](assets/images/screenshots/detail_page_2_bottom.png) |
+
+---
 
 ## Features
 
 - List restaurants (data from Mockoon JSON).
 - View detailed restaurant info.
 - Deep link support.
+
+---
 
 ## Notes
 
