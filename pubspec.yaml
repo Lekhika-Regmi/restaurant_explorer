@@ -2,7 +2,7 @@ name: restaurant_explorer_nepal
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -40,12 +40,25 @@ dependencies:
   firebase_auth: ^5.7.0
   dashed_circular_progress_bar: ^0.0.6
   google_sign_in: ^6.2.1
-  local_auth: ^2.1.6     # For biometric auth
+  local_auth: ^2.1.6 # For biometric auth
   local_auth_android: ^1.0.32
-  flutter_secure_storage: ^9.0.0   # For storing secure token locally
+  flutter_secure_storage: ^9.0.0 # For storing secure token locally
   shared_preferences: ^2.0.15
   crypto: ^3.0.3
-
+  image_picker: ^1.1.2
+  google_maps_flutter: ^2.2.0 # for embedding maps
+  url_launcher: ^6.1.7 # for opening external maps
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+  intl: ^0.18.1
+  provider: ^6.0.5
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  # Network and API
+  dio: ^5.4.0
+  http: ^1.1.2
+  go_router: ^13.2.2
+  app_links: ^6.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,12 +75,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/images/
     - assets/images/food_icon.png
     - assets/images/google_icon.svg
   # To add assets to your application, add an assets section, like this:
