@@ -343,10 +343,11 @@ class _AuthScreenState extends State<AuthScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text("No"),
+            child: const Text("No", style: TextStyle(color: Colors.black)),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.black87),
             child: const Text("Yes"),
           ),
         ],
@@ -360,28 +361,49 @@ class _AuthScreenState extends State<AuthScreen> {
 
   Future<void> _loginWithBiometrics() async {
     final enabled = await BiometricHelper.getBiometricPreference();
+    log('Biometric enabled: $enabled');
     if (!enabled) {
       _showSnackBar("Biometric login not enabled.");
       return;
     }
 
     final localAuth = LocalAuthentication();
-    final canCheck = await localAuth.canCheckBiometrics;
+    final isDeviceSupported = await localAuth.isDeviceSupported();
+    log('Device supports biometrics: $isDeviceSupported');
+    if (!isDeviceSupported) {
+      _showSnackBar("Device does not support biometrics.");
+      return;
+    }
 
+    final canCheck = await localAuth.canCheckBiometrics;
+    log('Can check biometrics: $canCheck');
     if (!canCheck) {
       _showSnackBar("Biometric not available.");
       return;
     }
 
-    final didAuthenticate = await localAuth.authenticate(
-      localizedReason: "Login with biometrics",
-      options: const AuthenticationOptions(biometricOnly: true),
-    );
+    final availableBiometrics = await localAuth.getAvailableBiometrics();
+    log('Available biometrics: $availableBiometrics');
+    if (availableBiometrics.isEmpty) {
+      _showSnackBar("No biometrics enrolled on device.");
+      return;
+    }
 
-    if (didAuthenticate) {
-      _goToHome(); // Navigate without password
-    } else {
-      _showSnackBar("Authentication failed.");
+    try {
+      final didAuthenticate = await localAuth.authenticate(
+        localizedReason: "Login with biometrics",
+        options: const AuthenticationOptions(biometricOnly: true),
+      );
+      log('Did authenticate: $didAuthenticate');
+
+      if (didAuthenticate) {
+        _goToHome(); // Navigate without password
+      } else {
+        _showSnackBar("Authentication failed.");
+      }
+    } catch (e) {
+      log('Biometric auth error: $e');
+      _showSnackBar("Biometric authentication error.");
     }
   }
 }

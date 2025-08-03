@@ -1,0 +1,189 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Restaurants",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3002/"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "{}"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/restaurants": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"name\": \"Bhojan Griha\",\r\n    \"address\": \"Dillibazar, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7094,\r\n      \"lng\": 85.3206\r\n    },\r\n    \"cuisine\": \"nepali\",\r\n    \"priceRange\": \"mid-range\",\r\n    \"rating\": 4.2,\r\n    \"phone\": \"+977-1-4411603\",\r\n    \"email\": \"info@bhojangrih.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Traditional Music\", \"Cultural Show\", \"Parking\"],\r\n    \"description\": \"Authentic Nepali cuisine in a traditional setting with cultural performances.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"bhojan.jpg\", \"bhojan2.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"11:00 - 22:00\",\r\n      \"tuesday\": \"11:00 - 22:00\",\r\n      \"wednesday\": \"11:00 - 22:00\",\r\n      \"thursday\": \"11:00 - 22:00\",\r\n      \"friday\": \"11:00 - 22:00\",\r\n      \"saturday\": \"11:00 - 22:00\",\r\n      \"sunday\": \"11:00 - 22:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"name\": \"Fire and Ice Pizzeria\",\r\n    \"address\": \"Tridevi Marg, Thamel, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7151,\r\n      \"lng\": 85.3075\r\n    },\r\n    \"cuisine\": \"italian\",\r\n    \"priceRange\": \"mid-range\",\r\n    \"rating\": 4.5,\r\n    \"phone\": \"+977-1-4250210\",\r\n    \"email\": \"info@fireandice.com.np\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"WiFi\", \"Credit Cards\", \"Delivery\"],\r\n    \"description\": \"Authentic wood-fired pizzas in the heart of Thamel.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/fire1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"12:00 - 23:00\",\r\n      \"tuesday\": \"12:00 - 23:00\",\r\n      \"wednesday\": \"12:00 - 23:00\",\r\n      \"thursday\": \"12:00 - 23:00\",\r\n      \"friday\": \"12:00 - 23:00\",\r\n      \"saturday\": \"12:00 - 23:00\",\r\n      \"sunday\": \"12:00 - 23:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"3\",\r\n    \"name\": \"Krishnarpan\",\r\n    \"address\": \"Dwarika's Hotel, Battisputali, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.6915,\r\n      \"lng\": 85.3447\r\n    },\r\n    \"cuisine\": \"nepali\",\r\n    \"priceRange\": \"fine-dining\",\r\n    \"rating\": 4.8,\r\n    \"phone\": \"+977-1-4479488\",\r\n    \"email\": \"krishnarpan@dwarikas.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Fine Dining\", \"Traditional Decor\", \"Valet Parking\"],\r\n    \"description\": \"Nepal's most acclaimed fine dining restaurant featuring traditional Nepali cuisine.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/krishna1.jpg\", \"https://example.com/krishna2.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"19:00 - 22:00\",\r\n      \"tuesday\": \"19:00 - 22:00\",\r\n      \"wednesday\": \"19:00 - 22:00\",\r\n      \"thursday\": \"19:00 - 22:00\",\r\n      \"friday\": \"19:00 - 22:00\",\r\n      \"saturday\": \"19:00 - 22:00\",\r\n      \"sunday\": \"19:00 - 22:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"4\",\r\n    \"name\": \"Thamel House Restaurant\",\r\n    \"address\": \"Thamel, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7144,\r\n      \"lng\": 85.3082\r\n    },\r\n    \"cuisine\": \"nepali\",\r\n    \"priceRange\": \"budget\",\r\n    \"rating\": 4.1,\r\n    \"phone\": \"+977-1-4410388\",\r\n    \"email\": \"info@thamelhouse.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Traditional Architecture\", \"Cultural Show\", \"WiFi\"],\r\n    \"description\": \"Traditional Nepali restaurant in a beautifully restored Newari house.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/thamel1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"10:00 - 22:00\",\r\n      \"tuesday\": \"10:00 - 22:00\",\r\n      \"wednesday\": \"10:00 - 22:00\",\r\n      \"thursday\": \"10:00 - 22:00\",\r\n      \"friday\": \"10:00 - 22:00\",\r\n      \"saturday\": \"10:00 - 22:00\",\r\n      \"sunday\": \"10:00 - 22:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"5\",\r\n    \"name\": \"Momos & More\",\r\n    \"address\": \"New Road, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7040,\r\n      \"lng\": 85.3077\r\n    },\r\n    \"cuisine\": \"fast food\",\r\n    \"priceRange\": \"budget\",\r\n    \"rating\": 3.9,\r\n    \"phone\": \"+977-1-4221845\",\r\n    \"email\": \"info@momosandmore.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Quick Service\", \"Takeaway\", \"Affordable\"],\r\n    \"description\": \"Best momos in town with various fillings and styles.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/momos1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"09:00 - 21:00\",\r\n      \"tuesday\": \"09:00 - 21:00\",\r\n      \"wednesday\": \"09:00 - 21:00\",\r\n      \"thursday\": \"09:00 - 21:00\",\r\n      \"friday\": \"09:00 - 21:00\",\r\n      \"saturday\": \"09:00 - 21:00\",\r\n      \"sunday\": \"09:00 - 21:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"6\",\r\n    \"name\": \"Yangling Tibetan Restaurant\",\r\n    \"address\": \"Lazimpat, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7172,\r\n      \"lng\": 85.3240\r\n    },\r\n    \"cuisine\": \"tibetan\",\r\n    \"priceRange\": \"budget\",\r\n    \"rating\": 4.3,\r\n    \"phone\": \"+977-1-4429389\",\r\n    \"email\": \"yangling@email.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Authentic Tibetan\", \"Cozy Atmosphere\", \"Vegetarian Options\"],\r\n    \"description\": \"Authentic Tibetan cuisine with traditional flavors and warm hospitality.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/yangling1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"11:00 - 21:00\",\r\n      \"tuesday\": \"11:00 - 21:00\",\r\n      \"wednesday\": \"11:00 - 21:00\",\r\n      \"thursday\": \"11:00 - 21:00\",\r\n      \"friday\": \"11:00 - 21:00\",\r\n      \"saturday\": \"11:00 - 21:00\",\r\n      \"sunday\": \"11:00 - 21:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"7\",\r\n    \"name\": \"Cafe Mitra\",\r\n    \"address\": \"Jhamsikhel, Lalitpur\",\r\n    \"location\": {\r\n      \"lat\": 27.6731,\r\n      \"lng\": 85.3158\r\n    },\r\n    \"cuisine\": \"continental\",\r\n    \"priceRange\": \"mid-range\",\r\n    \"rating\": 4.4,\r\n    \"phone\": \"+977-1-5548197\",\r\n    \"email\": \"info@cafemitra.com\",\r\n    \"city\": \"Lalitpur\",\r\n    \"district\": \"Lalitpur\",\r\n    \"features\": [\"Garden Seating\", \"WiFi\", \"Book Exchange\"],\r\n    \"description\": \"Cozy cafe with garden seating, great coffee, and continental dishes.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/mitra1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"08:00 - 22:00\",\r\n      \"tuesday\": \"08:00 - 22:00\",\r\n      \"wednesday\": \"08:00 - 22:00\",\r\n      \"thursday\": \"08:00 - 22:00\",\r\n      \"friday\": \"08:00 - 22:00\",\r\n      \"saturday\": \"08:00 - 22:00\",\r\n      \"sunday\": \"08:00 - 22:00\"\r\n    }\r\n  },\r\n  {\r\n    \"id\": \"8\",\r\n    \"name\": \"Baithak Restaurant\",\r\n    \"address\": \"Durbar Marg, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7056,\r\n      \"lng\": 85.3190\r\n    },\r\n    \"cuisine\": \"nepali\",\r\n    \"priceRange\": \"fine-dining\",\r\n    \"rating\": 4.6,\r\n    \"phone\": \"+977-1-4228781\",\r\n    \"email\": \"info@baithakrestaurant.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Elegant Ambiance\", \"Live Music\", \"Private Dining\"],\r\n    \"description\": \"Upscale Nepali restaurant with elegant ambiance and refined traditional cuisine.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"https://example.com/baithak1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"18:00 - 23:00\",\r\n      \"tuesday\": \"18:00 - 23:00\",\r\n      \"wednesday\": \"18:00 - 23:00\",\r\n      \"thursday\": \"18:00 - 23:00\",\r\n      \"friday\": \"18:00 - 23:00\",\r\n      \"saturday\": \"18:00 - 23:00\",\r\n      \"sunday\": \"18:00 - 23:00\"\r\n    }\r\n  }\r\n]"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/restaurants/1": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "{\n  \"id\": \"1\",\n  \"name\": \"Bhojan Griha\",\n  \"address\": \"Dillibazar, Kathmandu\",\n  \"location\": {\n    \"lat\": 27.7094,\n    \"lng\": 85.3206\n  },\n  \"cuisine\": \"nepali\",\n  \"priceRange\": \"mid-range\",\n  \"rating\": 4.2,\n  \"phone\": \"+977-1-4411603\",\n  \"email\": \"info@bhojangrih.com\",\n  \"city\": \"Kathmandu\",\n  \"district\": \"Kathmandu\",\n  \"features\": [\n    \"Traditional Music\",\n    \"Cultural Show\",\n    \"Parking\"\n  ],\n  \"description\": \"Authentic Nepali cuisine in a traditional setting with cultural performances.\",\n  \"isOpen\": true,\n  \"images\": [\n    \"bhojan.jpg\",\n    \"bhojan2.jpg\"\n  ],\n  \"openingHours\": {\n    \"monday\": \"11:00 - 22:00\",\n    \"tuesday\": \"11:00 - 22:00\",\n    \"wednesday\": \"11:00 - 22:00\",\n    \"thursday\": \"11:00 - 22:00\",\n    \"friday\": \"11:00 - 22:00\",\n    \"saturday\": \"11:00 - 22:00\",\n    \"sunday\": \"11:00 - 22:00\"\n  }\n}"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/restaurants/2": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": " {\r\n    \"id\": \"2\",\r\n    \"name\": \"Fire and Ice Pizzeria\",\r\n    \"address\": \"Tridevi Marg, Thamel, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.7151,\r\n      \"lng\": 85.3075\r\n    },\r\n    \"cuisine\": \"italian\",\r\n    \"priceRange\": \"mid-range\",\r\n    \"rating\": 4.5,\r\n    \"phone\": \"+977-1-4250210\",\r\n    \"email\": \"info@fireandice.com.np\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"WiFi\", \"Credit Cards\", \"Delivery\"],\r\n    \"description\": \"Authentic wood-fired pizzas in the heart of Thamel.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"fai1.jpg\",\"fai2,jpeg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"12:00 - 23:00\",\r\n      \"tuesday\": \"12:00 - 23:00\",\r\n      \"wednesday\": \"12:00 - 23:00\",\r\n      \"thursday\": \"12:00 - 23:00\",\r\n      \"friday\": \"12:00 - 23:00\",\r\n      \"saturday\": \"12:00 - 23:00\",\r\n      \"sunday\": \"12:00 - 23:00\"\r\n    }\r\n  }"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/restaurants/3": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": "  {\r\n    \"id\": \"3\",\r\n    \"name\": \"Krishnarpan\",\r\n    \"address\": \"Dwarika's Hotel, Battisputali, Kathmandu\",\r\n    \"location\": {\r\n      \"lat\": 27.6915,\r\n      \"lng\": 85.3447\r\n    },\r\n    \"cuisine\": \"nepali\",\r\n    \"priceRange\": \"fine-dining\",\r\n    \"rating\": 4.8,\r\n    \"phone\": \"+977-1-4479488\",\r\n    \"email\": \"krishnarpan@dwarikas.com\",\r\n    \"city\": \"Kathmandu\",\r\n    \"district\": \"Kathmandu\",\r\n    \"features\": [\"Fine Dining\", \"Traditional Decor\", \"Valet Parking\"],\r\n    \"description\": \"Nepal's most acclaimed fine dining restaurant featuring traditional Nepali cuisine.\",\r\n    \"isOpen\": true,\r\n    \"images\": [\"k1.jpg\"],\r\n    \"openingHours\": {\r\n      \"monday\": \"19:00 - 22:00\",\r\n      \"tuesday\": \"19:00 - 22:00\",\r\n      \"wednesday\": \"19:00 - 22:00\",\r\n      \"thursday\": \"19:00 - 22:00\",\r\n      \"friday\": \"19:00 - 22:00\",\r\n      \"saturday\": \"19:00 - 22:00\",\r\n      \"sunday\": \"19:00 - 22:00\"\r\n    }\r\n  }"
+              }
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "*"
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
