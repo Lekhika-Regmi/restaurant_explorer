@@ -32,48 +32,48 @@ A Flutter app to explore restaurants in Nepal, featuring deep linking and detail
 
 ### 🔐 Authentication Screens
 
-| Login | Sign Up | Enable Biometric | Native Biometric |
-|-------|---------|------------------|------------------|
+| Login                                              | Sign Up                                                | Enable Biometric                                                               | Native Biometric                                                               |
+| -------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | ![Login](assets/images/screenshots/auth_login.png) | ![Sign Up](assets/images/screenshots/auth_sign_up.png) | ![Biometric Enable](assets/images/screenshots/auth_biometric_enable_popup.png) | ![Native Biometric](assets/images/screenshots/auth_native_biometric_input.png) |
 
 ---
 
 ### 🍽️ Explore Screen
 
-| Explore | Explore Search | Sort |
-|---------|----------------|------|
+| Explore                                                 | Explore Search                                                        | Sort                                                |
+| ------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------- |
 | ![Explore](assets/images/screenshots/explore_sreen.png) | ![Search](assets/images/screenshots/explore_search_functionality.png) | ![Sort](assets/images/screenshots/explore_sort.png) |
 
 ---
 
 ### ❤️ Favorites Screen
 
-| Favorites | Sort By |
-|-----------|---------|
+| Favorites                                              | Sort By                                               |
+| ------------------------------------------------------ | ----------------------------------------------------- |
 | ![Favorites](assets/images/screenshots/fav_screen.png) | ![Sort By](assets/images/screenshots/fav_sort_by.png) |
 
 ---
 
 ### 👤 Account Screen
 
-| Account Main | Change Password | Security |
-|--------------|------------------|----------|
+| Account Main                                             | Change Password                                                                 | Security                                                    |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | ![Account](assets/images/screenshots/account_screen.png) | ![Change Password](assets/images/screenshots/account_change-password_popup.png) | ![Security](assets/images/screenshots/account_security.png) |
 
 ---
 
 ### 🗺️ Map View
 
-| Nearby Restaurants Map |
-|------------------------|
-| ![Map](assets/images/screenshots/maps_for_nearby_restaurant_overview.png) |
+| Nearby Restaurants Map                                                    | Map Marker Clicked                                             |
+| ------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![Map](assets/images/screenshots/maps_for_nearby_restaurant_overview.png) | ![Map Marker](assets/images/screenshots/maps_marker_click.png) |
 
 ---
 
 ### 📄 Detail Pages
 
-| Detail Page Top | Detail Page Bottom |
-|-----------------|--------------------|
+| Detail Page Top                                                | Detail Page Bottom                                                   |
+| -------------------------------------------------------------- | -------------------------------------------------------------------- |
 | ![Detail Top](assets/images/screenshots/detail_page_1_top.png) | ![Detail Bottom](assets/images/screenshots/detail_page_2_bottom.png) |
 
 ---
