@@ -4,6 +4,7 @@ import 'package:app_links/app_links.dart';
 import 'package:restaurant_explorer_nepal/screens/explore/explore_screen.dart';
 import 'package:restaurant_explorer_nepal/screens/restaurant_detail_screen.dart';
 import 'package:restaurant_explorer_nepal/widgets/bottom_navbar.dart';
+//custom deep link
 
 class DeepLinkListener extends StatefulWidget {
   const DeepLinkListener({super.key, required this.child});
@@ -16,8 +17,6 @@ class DeepLinkListener extends StatefulWidget {
 class _DeepLinkListenerState extends State<DeepLinkListener> {
   @override
   void initState() {
-    // TODO: implement initState
-
     final appLinks = AppLinks(); // AppLinks is singleton
 
     final sub = appLinks.uriLinkStream.listen((uri) {
