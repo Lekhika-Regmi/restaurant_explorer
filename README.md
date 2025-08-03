@@ -26,33 +26,33 @@ A Flutter app to explore restaurants in Nepal, featuring deep linking and detail
 
 ### Auth Screens
 
-| Login                                | Register                                   | Biometric Prompt                             |
-| ------------------------------------ | ------------------------------------------ | -------------------------------------------- |
-| ![Login](screenshots/auth_login.png) | ![Register](screenshots/auth_register.png) | ![Biometric](screenshots/auth_biometric.png) |
+| Login                                              | Register                                                 | Biometric Prompt                                           |
+| -------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------- |
+| ![Login](assets/images/screenshots/auth_login.png) | ![Register](assets/images/screenshots/auth_register.png) | ![Biometric](assets/images/screenshots/auth_biometric.png) |
 
 ### Explore Screens
 
-| Restaurant List                               | Restaurant Detail                         |
-| --------------------------------------------- | ----------------------------------------- |
-| ![Explore List](screenshots/explore_list.png) | ![Detail](screenshots/explore_detail.png) |
+| Restaurant List                                             | Restaurant Detail                                       |
+| ----------------------------------------------------------- | ------------------------------------------------------- |
+| ![Explore List](assets/images/screenshots/explore_list.png) | ![Detail](assets/images/screenshots/explore_detail.png) |
 
 ### Favorites
 
-| Favorites List                         |
-| -------------------------------------- |
-| ![Favorites](screenshots/fav_list.png) |
+| Favorites List                                       |
+| ---------------------------------------------------- |
+| ![Favorites](assets/images/screenshots/fav_list.png) |
 
 ### Account
 
-| Profile                                     | Settings                                      |
-| ------------------------------------------- | --------------------------------------------- |
-| ![Profile](screenshots/account_profile.png) | ![Settings](screenshots/account_settings.png) |
+| Profile                                                   | Settings                                                    |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Profile](assets/images/screenshots/account_profile.png) | ![Settings](assets/images/screenshots/account_settings.png) |
 
 ### Maps
 
-| Map View                          |
-| --------------------------------- |
-| ![Map](screenshots/maps_view.png) |
+| Map View                                        |
+| ----------------------------------------------- |
+| ![Map](assets/images/screenshots/maps_view.png) |
 
 ## Features
 
