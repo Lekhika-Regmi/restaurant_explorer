@@ -42,7 +42,7 @@ A Flutter app to explore restaurants in Nepal, featuring deep linking and detail
 
 | Explore | Explore Search | Sort |
 |---------|----------------|------|
-| ![Explore](assets/images/screenshots/explore_screen.png) | ![Search](assets/images/screenshots/explore_search_functionality.png) | ![Sort](assets/images/screenshots/explore_sort.png) |
+| ![Explore](assets/images/screenshots/explore_sreen.png) | ![Search](assets/images/screenshots/explore_search_functionality.png) | ![Sort](assets/images/screenshots/explore_sort.png) |
 
 ---
 
